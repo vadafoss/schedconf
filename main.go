@@ -12,12 +12,6 @@ import (
 )
 
 func main() {
-	// cfg, err := scheduler_config.Default()
-	// if err != nil {
-	// 	fmt.Printf("couldn't create scheduler config: %v", err)
-	// 	panic(1)
-	// }
-
 	file := "sample-config.yaml"
 	data, err := os.ReadFile(file)
 	if err != nil {
@@ -33,18 +27,9 @@ func main() {
 		panic(fmt.Errorf("couldn't decode as KubeSchedulerConfiguration, got %s: ", gvk))
 	}
 
-	// cfg.Profiles = cfgObj.Profiles
-
 	if err := validation.ValidateKubeSchedulerConfiguration(cfgObj); err != nil {
 		panic(err)
 	}
-
-	// b1, err := yaml.Marshal(cfg)
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// fmt.Println(string(b1))
 
 	b2, err := yaml.Marshal(cfgObj)
 	if err != nil {
