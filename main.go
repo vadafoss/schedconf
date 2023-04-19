@@ -8,7 +8,6 @@ import (
 
 	config "k8s.io/kubernetes/pkg/scheduler/apis/config"
 	"k8s.io/kubernetes/pkg/scheduler/apis/config/scheme"
-	"k8s.io/kubernetes/pkg/scheduler/apis/config/validation"
 )
 
 func main() {
@@ -25,10 +24,6 @@ func main() {
 	cfgObj, ok := obj.(*config.KubeSchedulerConfiguration)
 	if !ok {
 		panic(fmt.Errorf("couldn't decode as KubeSchedulerConfiguration, got %s: ", gvk))
-	}
-
-	if err := validation.ValidateKubeSchedulerConfiguration(cfgObj); err != nil {
-		panic(err)
 	}
 
 	b2, err := yaml.Marshal(cfgObj)
