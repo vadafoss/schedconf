@@ -118,6 +118,7 @@ github.com/google/go-cmp v0.5.1/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 github.com/google/go-cmp v0.5.4/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
+github.com/google/go-cmp v0.5.9/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/google/gofuzz v1.1.0 h1:Hsa8mG0dQ46ij8Sl2AYJDUv1oA9/d6Vk+3LG99Oe02g=
 github.com/google/gofuzz v1.1.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
@@ -519,6 +520,8 @@ k8s.io/apiserver v0.27.0-alpha.1 h1:2bMQrLAKBkn+SSlB5zWjYPBuebh8/oi5aItXPOtNUdU=
 k8s.io/apiserver v0.27.0-alpha.1/go.mod h1:yUdhHGNuvU2CpeigdIu+cKa3wVM93+aZlZU8MhbXH7E=
 k8s.io/component-base v0.27.0-alpha.1 h1:+5F9ilxocwZsj+Z8mS6nm64ZYQy6dRB+aYk6D1ApRjU=
 k8s.io/component-base v0.27.0-alpha.1/go.mod h1:5R5aAxOBbwPiDQrgRfV3nQHa+lhOXCUsiXOVWubXKio=
+k8s.io/component-helpers v0.27.0-alpha.1 h1:ben8y2mRXBx6tls8V8PF/MK8GkS6QdFnDjOGZ/KsIPY=
+k8s.io/component-helpers v0.27.0-alpha.1/go.mod h1:AULEoyFqwh3THhMUjrDtWRGqaxx0OpH6s5IfdmU+E6g=
 k8s.io/klog/v2 v2.80.1 h1:atnLQ121W371wYYFawwYx1aEY2eUfs4l3J72wtgAwV4=
 k8s.io/klog/v2 v2.80.1/go.mod h1:y1WjHnz7Dj687irZUWR/WLkLc5N1YHtjLdmgWjndZn0=
 k8s.io/kube-scheduler v0.27.0-alpha.1 h1:8raWcfrlDrKx983wqsdymE2ISlMNbBMPWXZXHA3TJII=

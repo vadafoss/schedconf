@@ -14,6 +14,7 @@ require (
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/gofuzz v1.1.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2 // indirect
@@ -34,6 +35,7 @@ require (
 	k8s.io/apimachinery v0.27.0-alpha.1 // indirect
 	k8s.io/apiserver v0.27.0-alpha.1 // indirect
 	k8s.io/component-base v0.27.0-alpha.1 // indirect
+	k8s.io/component-helpers v0.0.0 // indirect
 	k8s.io/klog/v2 v2.80.1 // indirect
 	k8s.io/kube-scheduler v0.0.0 // indirect
 	k8s.io/utils v0.0.0-20221128185143-99ec85e7a448 // indirect
