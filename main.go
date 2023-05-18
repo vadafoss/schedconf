@@ -4,14 +4,28 @@ import (
 	"fmt"
 	"os"
 
-	yaml "gopkg.in/yaml.v3"
-
+	"gopkg.in/yaml.v2"
 	config "k8s.io/kubernetes/pkg/scheduler/apis/config"
 	"k8s.io/kubernetes/pkg/scheduler/apis/config/scheme"
+	"k8s.io/kubernetes/pkg/scheduler/apis/config/validation"
+	// "k8s.io/kubernetes/cmd/kube-scheduler/app/options"
 )
 
 func main() {
-	file := "sample-config.yaml"
+
+	// Uncomment this line to get the default config
+	// schedConfig, err := scheduler_config.Default()
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// Uncomment and use this function to write the config file into correct yaml format
+	// err = options.LogOrWriteConfig("test-sched-config.yaml", schedConfig, schedConfig.Profiles)
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	file := "test-config-plugin-disabled.yaml"
 	data, err := os.ReadFile(file)
 	if err != nil {
 		panic(err)
@@ -26,10 +40,16 @@ func main() {
 		panic(fmt.Errorf("couldn't decode as KubeSchedulerConfiguration, got %s: ", gvk))
 	}
 
-	b2, err := yaml.Marshal(cfgObj)
-	if err != nil {
+	cfgObj.TypeMeta.APIVersion = gvk.GroupVersion().String()
+
+	if err := validation.ValidateKubeSchedulerConfiguration(cfgObj); err != nil {
 		panic(err)
 	}
 
-	fmt.Println(string(b2))
+	data, err = yaml.Marshal(cfgObj)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(data))
+
 }
