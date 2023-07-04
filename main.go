@@ -57,6 +57,7 @@ func main() {
 
 }
 
+// Copy-paste of upstream kube-scheduler code's `loadConfigFromFile` function
 func LoadConfigFromFile(logger klog.Logger, file string) (*config.KubeSchedulerConfiguration, error) {
 	data, err := os.ReadFile(file)
 	if err != nil {
@@ -66,6 +67,7 @@ func LoadConfigFromFile(logger klog.Logger, file string) (*config.KubeSchedulerC
 	return loadConfig(logger, data)
 }
 
+// Copy-paste of upstream kube-scheduler code's `loadConfig` function
 func loadConfig(logger klog.Logger, data []byte) (*config.KubeSchedulerConfiguration, error) {
 	// The UniversalDecoder runs defaulting and returns the internal type by default.
 	obj, gvk, err := scheme.Codecs.UniversalDecoder().Decode(data, nil, nil)
